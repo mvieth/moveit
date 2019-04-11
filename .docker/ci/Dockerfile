@@ -20,7 +20,7 @@ RUN \
     wstool init --shallow . https://raw.githubusercontent.com/ros-planning/moveit/master/moveit.rosinstall && \
     #
     # Update apt package list as previous containers clear the cache
-    apt-get -qq update && \
+    apt-get -qq update --fix-missing && \
     apt-get -qq dist-upgrade && \
     #
     # Install some base dependencies
